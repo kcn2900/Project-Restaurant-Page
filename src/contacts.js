@@ -12,7 +12,7 @@ export default function contactPage() {
 
 
     const credits = document.createElement("p");
-    credits.innerHTML = "Photo by <u>Time Stief</u> on <u>Unsplash</u>";
+    credits.innerHTML = "Photo by <u>Tim Stief</u> on <u>Unsplash</u>";
     credits.classList.add("contact-credit");
 
     row1.append(background, credits)
@@ -39,6 +39,7 @@ function createForm() {
 
     const textIn = document.createElement("textarea");
     textIn.setAttribute("placeholder", "Comments");
+    textIn.setAttribute("rows", "5")
 
     const submitBtn = document.createElement("button");
     submitBtn.setAttribute("type", "submit");

@@ -5,6 +5,8 @@ import './style.css'
 
 (() => {
     const buttons = document.querySelectorAll('nav > button');
+    aboutPage();
+    // startUp();
 
     buttons[0].addEventListener('click', () => {
         startUp();
