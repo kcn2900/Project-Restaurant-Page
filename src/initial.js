@@ -10,6 +10,7 @@ export default function startUp() {
     const topText = document.createElement("p");
     topText.textContent = "Welcome to the Restaurant Page";
     top.appendChild(topText);
+    top.appendChild(createPreview())
 
     const grid = document.createElement('div');
     grid.className = "home-grid";
@@ -26,10 +27,22 @@ export default function startUp() {
 
 function createCard() {
     const card = document.createElement('div');
-    const cardText = document.createElement('p');
+    const cardText = document.createElement('div');
 
     card.appendChild(cardText);
     cardText.textContent = "Testing testing testing";
 
     return card;
+}
+
+function createPreview() {
+    const grid = document.createElement("div");
+
+    for (let i = 0; i < 2; i++) {
+        grid.appendChild(createCard());
+        grid.children[i].classList.add(`card-${i}`);
+    }
+
+    grid.classList.add('home-top-grid');
+    return grid;
 }
